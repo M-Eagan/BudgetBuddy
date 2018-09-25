@@ -8,43 +8,52 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="shortcut icon" href="dollar_sign.png";>
 </head>
 <body>
-
+<header class="header-format"></header>
     <h1>Budget Buddy</h1>
     <h2>Weekly Budget Tracker</h2>
 
+    <p>What is your monthly budget?</p>
+</header>
     <div id="budget-container">
+        
             <form id="budget-input">
-                    Entertainment
-                    <input type="number" min="0.00" max="10000.00" method="post" id="entBudgetInput">
-                    Food
-                    <input type="number" min="0.00" max="10000.00" method="post" id="foodBudgetInput">
-                    Clothing
-                    <input type="number" min="0.00" max="10000.00" method="post" id="clothingBudgetInput">
-                    Bills
-                    <input type="number" min="0.00" max="10000.00" method="post" id="billsBudgetInput">
-                    <input class ="submitBudgetButton" type="button" value="Submit">
+                    <input type="number" min="0.00" max="10000.00" method="post" id="entBudgetInput" placeholder="Entertainment">
+                    <input type="number" min="0.00" max="10000.00" method="post" id="foodBudgetInput" placeholder="Food">
+                    <input type="number" min="0.00" max="10000.00" method="post" id="billsBudgetInput" placeholder="Bills">
+                    <input type="number" min="0.00" max="10000.00" method="post" id="clothingBudgetInput" placeholder="Clothing">
+                    
+
+                    <p>
+                        <input class ="submitBudgetButton" type="button" value="Submit">
+                    </p>
             </form>
-    
         </div>
 
-    <div id="input-container">
+    <p>What did you purchase?</p>
+    <span id="input-container">
         <form id="transaction-input">
 
-                Date
-                <input type="date" id="dateTransaction" method="post">
-                Category
-                <input type="checkbox" id="entertainmentTransaction" method="post"> Entertainment
-                <input type="checkbox" id="foodTransaction" method="post"> Food 
-                <input type="checkbox" id="clothingTransaction" method="post"> Clothing
-                <input type="checkbox" id="billsTransaction" method="post"> Bills
-                <input type="text" id="itemDescription" method="post">Item
-                <input type="number" min="0.00" max="10000.00" step="0.01" method="post" id="amountTransaction">Amount
+                Date<input type="date" id="dateTransaction" method="post">
+                <h3>Category</h3>
+                <div class="category-input">
+                
+                Entertainment<input type="checkbox" id="entertainmentTransaction" method="post"> 
+                Food<input type="checkbox" id="foodTransaction" method="post"> 
+                Clothing<input type="checkbox" id="clothingTransaction" method="post">
+                Bills<input type="checkbox" id="billsTransaction" method="post">
+                
+            </div>
+                <input type="text" id="itemDescription" method="post" placeholder="Item">
+                <input type="number" min="0.00" max="10000.00" step="0.01" method="post" id="amountTransaction" placeholder="Amount">
+            <p>
                 <input class ="submitTransactionButton" type="button" value="Submit">
+            </p>
         </form>
 
-    </div>
+    </span>
 
 
     <div id="table-container">
@@ -105,10 +114,11 @@
               </tr>   
     
             </table>
-        </div>
+</div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
